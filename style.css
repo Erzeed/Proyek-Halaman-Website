@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(233, 235, 245);
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+aside.left {
+    height: 100%;
+    width: 6%;
+    display: flex;
+    border-radius: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+}
+aside.left .logo {
+    text-align: center;
+}
+nav {
+    height: 250px;
+}
+nav ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    cursor: pointer;
+    list-style: none;
+}
+nav ul li:first-child {
+    background-color: #2330a4;
+    padding: 9px 9px 4px 9px;
+    border-radius: 12px;
+}
+nav ul li:first-child i {
+    color: #fff;
+}
+nav ul li i {
+    font-size: 20px;
+    color: #2330a4;
+}
+main {
+    overflow: scroll;
+    margin: 5px 10px;
+    width: 100%;
+}
+article#Home {
+    width: 100%;
+    position: relative;
+}
+article#Home .txt{
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 300px);
+    text-align: center;
+    color: #fff;
+}
+article#Home .txt p {
+    text-shadow: 0 0 5px rgb(0 0 0 / 75%);
+}
+article#Home .txt h1 {
+    font-size: 70px;
+    margin: 0;
+    font-weight: 500;
+    text-shadow: 0 0 5px rgb(0 0 0 / 75%);
+}
+article#Home .txt button {
+    border: none;
+    background-color: #2330a4;
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    border-radius:3px;
+    transition: 0.1s;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    transform: translate(0,0);
+}
+article#Home img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius:10px;
+}
+
+
+article#Home .txt button:active {
+    transform: translate(2px,2px);
+    box-shadow: none;
+}
