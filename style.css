@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(233, 235, 245);
-    display: flex;
+    background: rgb(124,136,215);
+    background: linear-gradient(280deg, rgba(124,136,215,1) 0%, rgba(231,234,255,1) 0%);
     height: 100vh;
+    display: flex;
     margin: 0;
     padding: 0;
+    transition: .5s ease;
 }
-aside.left {
+header {
     height: 100%;
     width: 6%;
     display: flex;
@@ -22,7 +26,7 @@ aside.left {
     background-color: #fff;
     padding: 10px;
 }
-aside.left .logo {
+header .logo {
     text-align: center;
 }
 nav {
@@ -42,21 +46,51 @@ nav ul li {
     cursor: pointer;
     list-style: none;
 }
-nav ul li:first-child {
+nav ul li a {
+    text-decoration: none;
+}
+.btn {
     background-color: #2330a4;
     padding: 9px 9px 4px 9px;
     border-radius: 12px;
+    
 }
-nav ul li:first-child i {
-    color: #fff;
+.li {
+    color: #fff !important;
 }
 nav ul li i {
     font-size: 20px;
     color: #2330a4;
 }
+header .mode {
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius:10px;
+    padding: 1px;
+    align-items: center;
+    position: relative;
+}
+header .ball {
+    width: 18px;
+    height: 18px;
+    border:1px solid rgba(0, 0, 0, 0.5);
+    border-radius:50%;
+    position: absolute;
+    left: 2px;
+    background-color: #2330a4;
+    transition: .5s ease;
+}
+
+header input {
+    opacity: 0;
+    cursor: pointer;
+}
+
 main {
     overflow: scroll;
-    margin: 5px 10px;
+    margin: 10px 0 0 10px ;
     width: 100%;
 }
 article#Home {
@@ -102,4 +136,192 @@ article#Home img {
 article#Home .txt button:active {
     transform: translate(2px,2px);
     box-shadow: none;
+}
+
+article#topVisited {
+    position: relative;
+}
+article#topVisited .title {
+    text-align: center;
+    font-size: 25px;
+}
+article#topVisited .title  h1 {
+    margin-bottom: 10px;
+}
+article#topVisited .slider {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 30px;
+}
+article#topVisited .slider .img{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+article#topVisited .slider button {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+}
+article#topVisited .slider button.left {
+    left: 30px;
+    top: 50%;
+}
+article#topVisited .slider button.right {
+    right: 30px;
+    top: 50%;
+} 
+article#topVisited  .slider .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+article#topVisited .slider .img.activated{
+    display: flex;
+}
+article#Destination .cardContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+article#Destination .title {
+    text-align: center;
+    font-size: 25px;
+}
+article#Destination .title h1 {
+    margin-bottom: 10px;
+}
+article#Destination .card {
+    position: relative;
+    margin: 5px;
+    cursor: pointer;
+}
+article#Destination .card .img {
+    height: 270px;
+    width: 225px;
+    overflow: hidden;
+    border-radius:10px;
+}
+article#Destination .card .img img {
+    width: 100%;
+    height: 100%;
+    border-radius:10px;
+    transition: transform .5s ease;
+    object-fit: cover;
+}
+article#Destination .card .namedestination {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+}
+article#Destination .card .img:hover img {
+    transform: scale(1.2);
+}
+aside#me {
+    margin-top: 20px;
+    height: 350px;
+}
+aside#me .title  {
+    font-size: 25px;
+    text-align: center;
+}
+aside#me .title h1 {
+    margin-bottom: 0;
+}
+#me .aboutMe {
+    background-color: #000;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius:10px;
+}
+aside#me .aboutMe img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    
+}
+aside#me .aboutMe .detail {
+    text-align: center;
+}
+aside#me .aboutMe .detail p,
+aside#me .aboutMe .detail h2 {
+    margin: 0;
+}
+
+footer {
+    margin-top: 90px;
+    height: 50px;
+    background-color: #2330a4;
+    color: #fff;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+/* darkmode */
+.activeBody {
+    background: #1e1f26;
+    color: darken( white, 50% );
+    transition: .5s ease;
+}
+
+.activeMain {
+    color:#fff;
+}
+.activeMe {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+header .active{
+    transform: translateX(32px);
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        display: inline;
+    }
+    header {
+        width: 100%;
+        height: 50px;
+        border-radius: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav ul{
+        flex-direction:row;
+        width: 250px;
+    }
+    .mode {
+        margin-top: 25px;
+    }
+}
+@media only screen and (max-width: 640px) {
+    nav ul li i {
+        font-size: 14px;
+    }
+    .btn {
+        padding: 5px 5px 2px 5px;
+        border-radius: 5px;
+    }
+    article#Destination .cardContainer{
+        justify-content: center;
+    }
+    article#Home .txt {
+        left: calc(50% - 150px);
+    }
+    article#Home .txt h1 {
+        font-size: 30px;
+    }
 }

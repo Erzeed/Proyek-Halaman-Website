@@ -9,22 +9,41 @@
     <title>Document</title>
 </head>
 <body>
-    <aside class="left">
+    <header>
         <div class="logo">
             <h3>CLP</h3>
         </div>
         <nav>
             <ul>
-                <li><i class="ri-home-3-fill"></i></li>
-                <li><i class="ri-door-closed-fill"></i></li>
-                <li><i class="ri-landscape-fill"></i></li>
-                <li><i class="ri-user-5-fill"></i></li>
+                <li>
+                    <a href="#Home">
+                        <i class="ri-home-3-fill"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#topVisited">
+                        <i class="ri-door-closed-fill"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Destination">
+                        <i class="ri-landscape-fill"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#me">
+                        <i class="ri-user-5-fill"></i>
+                    </a>
+                </li>
             </ul>
         </nav>
         <div class="mode">
-            <button>darkmode</button>
+            <i class="ri-sun-line"></i>
+            <input type="checkbox">
+            <i class="ri-moon-fill"></i>
+            <div class="ball"></div>
         </div>
-    </aside>
+    </header>
     <main id="content" >
         <article id="Home">
             <div class="img">
@@ -36,40 +55,94 @@
                 <button>Scrool Now</button>
             </div>
         </article>
-        <article id="slide">
-            <button></button>
-            <div class="img">
-                <img src="https://4.bp.blogspot.com/-mbphbA2fiFg/WQ2eZu3F93I/AAAAAAAAAL8/eXOkd4LPXwccuQzNmGi-6stO-UlH259aACEw/s1600/Pantai%2BPermisan.jpg" alt="">
+        <article id="topVisited">
+            <div class="title">
+                <h1>Top Visited</h1>
             </div>
-            <button></button>
+            <div class="slider">
+                <button class="left" ><i class="ri-arrow-left-line"></i></button>
+                <div class="img activated">
+                    <img src="https://4.bp.blogspot.com/-mbphbA2fiFg/WQ2eZu3F93I/AAAAAAAAAL8/eXOkd4LPXwccuQzNmGi-6stO-UlH259aACEw/s1600/Pantai%2BPermisan.jpg" alt="">
+                </div>
+                <div class="img">
+                    <img src="https://www.mgriyahotel.com/wp-content/uploads/2017/08/ale_Pengunjung-melakukan-swafoto-di-Gunung-Selok-View-kemarin.jpg" alt="">
+                </div>
+                <button class="right" ><i class="ri-arrow-right-line"></i></button>
+            </div>
         </article>
         <article id="Destination">
             <div class="title">
-                <h2>Destination Highlight</h2>
+                <h1>Destination Highlight</h1>
             </div>
-            <div class="card">
-                <div class="img">
-                    <img src="https://cdn.nativeindonesia.com/foto/2018/11/Benteng-Pendem-Inside-2.jpg" alt="">
+            <div class="cardContainer">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://cdn.nativeindonesia.com/foto/2018/11/Benteng-Pendem-Inside-2.jpg" alt="">
+                    </div>
+                    <div class="namedestination">
+                        <p>Benteng Pendem</p>
+                    </div>
                 </div>
-                <div class="namedestination">
-                    <p>Benteng Pendem</p>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://labirutour.com/wp-content/uploads/2018/09/Kampung-Laut-3.jpg" alt="">
+                    </div>
+                    <div class="namedestination">
+                        <p>Kampung Laut</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://cdn-2.tstatic.net/tribunnewswiki/foto/bank/images/Pantai-Jetis.jpg" alt="">
+                    </div>
+                    <div class="namedestination">
+                        <p>Pantai Jetis</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://sikidang.com/wp-content/uploads/Pantai-Sodong-1.jpg" alt="">
+                    </div>
+                    <div class="namedestination">
+                        <p>Pantai Sodong</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://sikidang.com/wp-content/uploads/Pantai-Teluk-Penyu.jpg" alt="">
+                    </div>
+                    <div class="namedestination">
+                        <p>Pantai Teluk Penyu</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://sikidang.com/wp-content/uploads/Segara-Anakan-1.jpg" alt="">
+                    </div>
+                    <div class="namedestination">
+                        <p>Segara Anakan</p>
+                    </div>
                 </div>
             </div>
         </article>
-        <article>
+        <aside id="me">
+            <div class="title">
+                <h1>About Me</h1>
+            </div>
             <div class="aboutMe">
                 <div class="img">
                     <img src="https://cdn.discordapp.com/attachments/764062693124341760/860512682703323166/unknown.png" alt="">
                 </div>
                 <div class="detail">
-                    <h4>Feizal Reza</h4>
-                    <p>Mahasiswa</p>
+                    <h2>Feizal Reza</h2>
+                    <p>Dicoding</p>
                 </div>
             </div>
-        </article>
+        </aside>
+        <footer>
+            <p>Made with ❤️ By Erzeed</p>
+        </footer>
     </main>
-    <footer>
-        
-    </footer>
 </body>
+<script src="script.js"></script>
 </html>
